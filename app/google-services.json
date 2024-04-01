@@ -1,36 +1,26 @@
 {
   "project_info": {
-    "project_number": "911557658101",
-    "project_id": "signup-login-realtime-b8960",
-    "storage_bucket": "signup-login-realtime-b8960.appspot.com"
+    "project_number": "374422488413",
+    "project_id": "signup-login-realtime-a319a",
+    "storage_bucket": "signup-login-realtime-a319a.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:911557658101:android:55bbd28d385b1bac78ccbc",
+        "mobilesdk_app_id": "1:374422488413:android:6664e8e606ce34846ed4b4",
         "android_client_info": {
           "package_name": "com.example.signuploginrealtime"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "911557658101-lebqvcq4cpqbvf7djv4jk7chkkf8ejb0.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAzGgp8ljvVWFo7iBYi-Aw1rcTwfvYCcC0"
+          "current_key": "AIzaSyByiC95SAi5pykyfN3cmvjfQudcTQVp40A"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "911557658101-lebqvcq4cpqbvf7djv4jk7chkkf8ejb0.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

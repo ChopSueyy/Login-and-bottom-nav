@@ -1,5 +1,6 @@
 package com.example.bottomnavigationdemo;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -8,6 +9,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.app.Dialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -23,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,19 +36,15 @@ public class MainActivity extends AppCompatActivity {
         binding.bottomNavigationView.setBackground(null);
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
 
-            switch (item.getItemId()) {
-                case R.id.home:
-                    replaceFragment(new HomeFragment());
-                    break;
-                case R.id.shorts:
-                    replaceFragment(new ShortsFragment());
-                    break;
-                case R.id.subscriptions:
-                    replaceFragment(new SubscriptionFragment());
-                    break;
-                case R.id.library:
-                    replaceFragment(new LibraryFragment());
-                    break;
+            int itemId = item.getItemId();
+            if (itemId == R.id.home) {
+                replaceFragment(new HomeFragment());
+            } else if (itemId == R.id.shorts) {
+                replaceFragment(new ShortsFragment());
+            } else if (itemId == R.id.subscriptions) {
+                replaceFragment(new SubscriptionFragment());
+            } else if (itemId == R.id.library) {
+                replaceFragment(new LibraryFragment());
             }
 
             return true;
